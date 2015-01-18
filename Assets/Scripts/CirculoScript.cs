@@ -47,7 +47,20 @@ public class CirculoScript : MonoBehaviour
 		
 		
 		}
+	void OnCollisionEnter2D (Collision2D  coll)
 
+	{
+		if (coll.gameObject.tag == "Player") {
+			Debug.Log("Nome Tocques Jugador");	
+			Destroy(this.gameObject,0.5f);
+
+			anim.SetBool("Destroy",true);
+			
+		}
+			
+		
+	}
+		
 
 	
 		void Flip ()
