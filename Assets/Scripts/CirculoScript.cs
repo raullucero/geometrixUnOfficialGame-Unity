@@ -13,16 +13,16 @@ public class CirculoScript : MonoBehaviour
 		public Text r1;
 		public Text r2;
 		public Text r3;
-		private string pregunta = "¿A que figura corresponde este enemigo?";
-		private string respuesta1 = "Cuadrado";
-		private string respuesta2 = "Rombo";
-		private string respuesta3 = "Circulo";
+		private string[,] pregunta = new string[3, 4];
+
 		
 		// Use this for initialization
 		void Start ()
 		{
+				cargarPreguntas ();
 				anim = GetComponent<Animator> ();
 				move = -4f;
+
 		}
 	
 		// Update is called once per frame
@@ -46,7 +46,7 @@ public class CirculoScript : MonoBehaviour
 
 		void FixedUpdate ()
 		{
-
+		
 				anim.SetFloat ("Speed", Mathf.Abs (move));
 				rigidbody2D.velocity = new Vector2 (move, rigidbody2D.velocity.y);
 
@@ -54,12 +54,15 @@ public class CirculoScript : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D  coll)
 		{
-				if (coll.gameObject.tag == "Player") {	
+			
+				if (coll.gameObject.tag == "Player") {
+						int i = Random.Range (0, 3);
+						Debug.Log (i);
 						Destroy (this.gameObject, 0.5f);
-						textQuestions.text = pregunta;
-						r1.text = respuesta1;
-						r2.text = respuesta2;
-						r3.text = respuesta3;
+						textQuestions.text = pregunta [i, 0];
+						r1.text = pregunta [i, 0];
+						r2.text = pregunta [i, 0];
+						r3.text = pregunta [i, 0];
 						anim.SetBool ("Destroy", true);
 				}
 		
@@ -72,4 +75,22 @@ public class CirculoScript : MonoBehaviour
 				theScale.x *= -1;
 				transform.localScale = theScale;
 		}
+
+		void cargarPreguntas ()
+		{
+				
+				pregunta [0, 0] = "¿A que figura corresponde este enemigo?";
+				pregunta [0, 1] = "Cuadrado";
+				pregunta [0, 2] = "Rombo";
+				pregunta [0, 3] = "Circulo";
+				pregunta [1, 0] = "¿Cual es la formula del area del circulo?";
+				pregunta [1, 1] = "Pi*radio^2 ";
+				pregunta [1, 2] = "Lado*Lado";
+				pregunta [1, 3] = "Base * Altura";
+				pregunta [2, 0] = "¿Cual es la formula del perimetro de un circulo?";
+				pregunta [2, 1] = "Pi*radio^2";
+				pregunta [2, 2] = "Pi*diametro";
+				pregunta [2, 3] = "Lado*4";
+		}
+
 }
