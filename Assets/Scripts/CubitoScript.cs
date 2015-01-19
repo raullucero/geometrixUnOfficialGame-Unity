@@ -13,7 +13,7 @@ public class CubitoScript : MonoBehaviour
 		float groundRadius = 0.5f;
 		public LayerMask whatIsGround;
 		public GameObject menu;
-		
+		private bool isShowing;
 		
 		// Use this for initialization
 		void Start ()
@@ -70,6 +70,8 @@ public class CubitoScript : MonoBehaviour
 	{
 		if (coll.gameObject.tag == "Enemy") {
 			menu.SetActive (true);
+			isShowing = !isShowing;
+			Time.timeScale = 0.0f;
 			return;
 		}
 	}

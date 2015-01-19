@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI; 
 
 public class CirculoScript : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class CirculoScript : MonoBehaviour
 		int direction;
 		float move;
 		Animator anim;
-
+		public Text textQuestions;
+		
 		// Use this for initialization
 		void Start ()
 		{
@@ -31,6 +33,8 @@ public class CirculoScript : MonoBehaviour
 						Flip ();
 						Debug.Log ("Cambio hacia derecha");
 				}
+
+				
 		}
 
 		void FixedUpdate ()
@@ -50,12 +54,10 @@ public class CirculoScript : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D  coll)
 		{
-				if (coll.gameObject.tag == "Player") {
-						Debug.Log ("Nome Tocques Jugador");	
+				if (coll.gameObject.tag == "Player") {	
 						Destroy (this.gameObject, 0.5f);
-
+						textQuestions.text= "me tocaste";	
 						anim.SetBool ("Destroy", true);
-			
 				}
 		
 		}
