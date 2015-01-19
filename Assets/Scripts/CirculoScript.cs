@@ -10,6 +10,13 @@ public class CirculoScript : MonoBehaviour
 		float move;
 		Animator anim;
 		public Text textQuestions;
+		public Text r1;
+		public Text r2;
+		public Text r3;
+		private string pregunta = "¿A que figura corresponde este enemigo?";
+		private string respuesta1 = "Cuadrado";
+		private string respuesta2 = "Rombo";
+		private string respuesta3 = "Circulo";
 		
 		// Use this for initialization
 		void Start ()
@@ -49,7 +56,10 @@ public class CirculoScript : MonoBehaviour
 		{
 				if (coll.gameObject.tag == "Player") {	
 						Destroy (this.gameObject, 0.5f);
-						textQuestions.text = "me tocaste";	
+						textQuestions.text = pregunta;
+						r1.text = respuesta1;
+						r2.text = respuesta2;
+						r3.text = respuesta3;
 						anim.SetBool ("Destroy", true);
 				}
 		
