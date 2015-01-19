@@ -19,6 +19,7 @@ public class PentagonoScript : MonoBehaviour
 		void Start ()
 		{
 				anim = GetComponent<Animator> ();		
+				cargarPreguntas ();
 		
 		}
 	
