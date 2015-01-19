@@ -57,6 +57,8 @@ public class CirculoScript : MonoBehaviour
 			anim.SetBool("Destroy",true);
 			
 		}
+
+
 			
 		
 	}
