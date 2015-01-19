@@ -62,10 +62,6 @@ public class CubitoScript : MonoBehaviour
 						anim.SetBool ("isJump", false);		
 				}
 
-				if (Input.GetKeyDown (KeyCode.M)) {
-						
-				}
-			
 		
 		}
 
