@@ -65,16 +65,16 @@ public class CubitoScript : MonoBehaviour
 		
 		}
 
-	void OnCollisionEnter2D (Collision2D  coll)
-		
-	{
-		if (coll.gameObject.tag == "Enemy") {
-			menu.SetActive (true);
-			isShowing = !isShowing;
-			Time.timeScale = 0.0f;
-			return;
+		void OnCollisionEnter2D (Collision2D  coll)
+		{
+				if (coll.gameObject.tag == "Enemy") {
+						menu.SetActive (true);
+						isShowing = !isShowing;
+						Time.timeScale = 0.0f;
+						return;
+				}
 		}
-	}
+
 		void Flip ()
 		{
 				facingRight = !facingRight;

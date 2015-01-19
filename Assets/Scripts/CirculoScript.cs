@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class CirculoScript : MonoBehaviour
 {
@@ -49,7 +49,7 @@ public class CirculoScript : MonoBehaviour
 		{
 				if (coll.gameObject.tag == "Player") {	
 						Destroy (this.gameObject, 0.5f);
-						textQuestions.text= "me tocaste";	
+						textQuestions.text = "me tocaste";	
 						anim.SetBool ("Destroy", true);
 				}
 		

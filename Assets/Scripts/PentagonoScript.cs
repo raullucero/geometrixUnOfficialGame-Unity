@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class PentagonoScript : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PentagonoScript : MonoBehaviour
 		int direction;
 		float move;
 		Animator anim;
+		public Text textQuestions;
 
 		// Use this for initialization
 		void Start ()
@@ -30,6 +32,16 @@ public class PentagonoScript : MonoBehaviour
 						Flip ();
 
 	
+		}
+
+		void OnCollisionEnter2D (Collision2D  coll)
+		{
+				if (coll.gameObject.tag == "Player") {	
+						Destroy (this.gameObject, 0.5f);
+						textQuestions.text = "me tocaste";	
+
+				}
+		
 		}
 
 		void Flip ()
