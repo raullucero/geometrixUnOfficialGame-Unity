@@ -20,17 +20,17 @@ public class CirculoScript : MonoBehaviour
 		void Update ()
 		{
 
-		//Debug.Log (transform.position.x+ " " +transform.position.y);
-		if (transform.position.x>10.6f && transform.position.x< 10.8f) {
-			move *= -1;
-			Flip();
-			Debug.Log("Cambio hacia derecha");
+				//Debug.Log (transform.position.x+ " " +transform.position.y);
+				if (transform.position.x > 10.6f && transform.position.x < 10.8f) {
+						move *= -1;
+						Flip ();
+						Debug.Log ("Cambio hacia derecha");
 			
-		} else if (transform.position.x>31.5 && transform.position.x< 31.7f) {
-			move *= -1;
-			Flip();
-			Debug.Log("Cambio hacia derecha");
-		}
+				} else if (transform.position.x > 31.5 && transform.position.x < 31.7f) {
+						move *= -1;
+						Flip ();
+						Debug.Log ("Cambio hacia derecha");
+				}
 		}
 
 		void FixedUpdate ()
@@ -48,7 +48,17 @@ public class CirculoScript : MonoBehaviour
 		
 		}
 
+		void OnCollisionEnter2D (Collision2D  coll)
+		{
+				if (coll.gameObject.tag == "Player") {
+						Debug.Log ("Nome Tocques Jugador");	
+						Destroy (this.gameObject, 0.5f);
 
+						anim.SetBool ("Destroy", true);
+			
+				}
+		
+		}
 	
 		void Flip ()
 		{

@@ -12,8 +12,9 @@ public class CubitoScript : MonoBehaviour
 		public Transform groundCheck;
 		float groundRadius = 0.5f;
 		public LayerMask whatIsGround;
+		public GameObject menu;
 		
-	
+		
 		// Use this for initialization
 		void Start ()
 		{
@@ -60,10 +61,18 @@ public class CubitoScript : MonoBehaviour
 				} else if (!grounded) {
 						anim.SetBool ("isJump", false);		
 				}
-			
+
 		
 		}
-	
+
+	void OnCollisionEnter2D (Collision2D  coll)
+		
+	{
+		if (coll.gameObject.tag == "Enemy") {
+			menu.SetActive (true);
+			return;
+		}
+	}
 		void Flip ()
 		{
 				facingRight = !facingRight;
