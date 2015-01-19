@@ -57,12 +57,11 @@ public class CirculoScript : MonoBehaviour
 			
 				if (coll.gameObject.tag == "Player") {
 						int i = Random.Range (0, 3);
-						Debug.Log (i);
 						Destroy (this.gameObject, 0.5f);
 						textQuestions.text = pregunta [i, 0];
-						r1.text = pregunta [i, 0];
-						r2.text = pregunta [i, 0];
-						r3.text = pregunta [i, 0];
+						r1.text = pregunta [i, 1];
+						r2.text = pregunta [i, 2];
+						r3.text = pregunta [i, 3];
 						anim.SetBool ("Destroy", true);
 				}
 		
