@@ -43,13 +43,6 @@ public class CirculoScript : MonoBehaviour
 				anim.SetFloat ("Speed", Mathf.Abs (move));
 				rigidbody2D.velocity = new Vector2 (move, rigidbody2D.velocity.y);
 
-		
-				/*if (move > 0 && !facingRight) 
-			Flip ();
-		else if (move < 0 && facingRight) 
-			Flip ();*/
-		
-		
 		}
 
 		void OnCollisionEnter2D (Collision2D  coll)

@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Preguntas : MonoBehaviour {
 
+
+
 	// Use this for initialization
 	void Start () {
 	
@@ -10,6 +12,6 @@ public class Preguntas : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }
