@@ -69,9 +69,8 @@ public class CubitoScript : MonoBehaviour
 		
 	{
 		if (coll.gameObject.tag == "Enemy") {
-
 			menu.SetActive (true);
-			
+			return;
 		}
 	}
 		void Flip ()
