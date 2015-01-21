@@ -14,6 +14,7 @@ public class CirculoScript : MonoBehaviour
 		public Text r2;
 		public Text r3;
 		private string[,] pregunta = new string[3, 4];
+		
 
 		
 		// Use this for initialization
@@ -91,5 +92,6 @@ public class CirculoScript : MonoBehaviour
 				pregunta [2, 2] = "Pi*diametro";
 				pregunta [2, 3] = "Lado*4";
 		}
+
 
 }

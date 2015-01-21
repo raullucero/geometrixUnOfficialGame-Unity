@@ -46,14 +46,14 @@ public class TrianguloScript : MonoBehaviour
 		{
 		
 				pregunta [0, 0] = "¿A que figura corresponde este enemigo?";
-				pregunta [0, 1] = "Trieangulo";
+				pregunta [0, 1] = "Triangulo";
 				pregunta [0, 2] = "Rombo";
 				pregunta [0, 3] = "Circulo";
 				pregunta [1, 0] = "¿Cual es la formula del area de un triangulo?";
 				pregunta [1, 1] = "Pi*radio^2 ";
 				pregunta [1, 2] = "Lado*Lado";
 				pregunta [1, 3] = "(Base * Altura)/2";
-				pregunta [2, 0] = "¿Cual es la formula del perimetro de un circulo?";
+				pregunta [2, 0] = "¿Cual es la formula del perimetro de un triangulo?";
 				pregunta [2, 1] = "Pi*radio^2";
 				pregunta [2, 2] = "Sumar los 3 lados";
 				pregunta [2, 3] = "Lado*4";

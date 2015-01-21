@@ -14,6 +14,7 @@ public class CubitoScript : MonoBehaviour
 		public LayerMask whatIsGround;
 		public GameObject menu;
 		private bool isShowing;
+		private string figura;
 		
 		// Use this for initialization
 		void Start ()
@@ -68,6 +69,7 @@ public class CubitoScript : MonoBehaviour
 		void OnCollisionEnter2D (Collision2D  coll)
 		{
 				if (coll.gameObject.tag == "Enemy") {
+						figura = coll.gameObject.name;
 						menu.SetActive (true);
 						isShowing = !isShowing;
 						Time.timeScale = 0.0f;
@@ -82,5 +84,11 @@ public class CubitoScript : MonoBehaviour
 				Vector3 theScale = transform.localScale;
 				theScale.x *= -1;
 				transform.localScale = theScale;
+		}
+
+		public string Figura {
+				get {
+						return figura;
+				}
 		}
 }
