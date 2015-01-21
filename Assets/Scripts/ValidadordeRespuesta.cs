@@ -35,8 +35,9 @@ public class ValidadordeRespuesta : MonoBehaviour
 						menu.SetActive (false);
 						Time.timeScale = 1.0f;
 				} else {
-						Debug.Log ("you die");	
-			menu.SetActive (false);
+						Debug.Log ("you die");
+						Time.timeScale = 1.0f;
+						menu.SetActive (false);
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
 
@@ -71,7 +72,8 @@ public class ValidadordeRespuesta : MonoBehaviour
 						Time.timeScale = 1.0f;
 				} else {
 						Debug.Log ("you die");
-			menu.SetActive (false);
+						Time.timeScale = 1.0f;
+						menu.SetActive (false);
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
 	
@@ -94,8 +96,9 @@ public class ValidadordeRespuesta : MonoBehaviour
 						menu.SetActive (false);
 						Time.timeScale = 1.0f;
 				} else {
-						Debug.Log ("you die");	
-			menu.SetActive (false);
+						Debug.Log ("you die");
+						Time.timeScale = 1.0f;	
+						menu.SetActive (false);
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
 
