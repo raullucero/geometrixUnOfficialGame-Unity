@@ -25,7 +25,7 @@ public class TrianguloScript : MonoBehaviour
 				move = -.3f;
 				player = GameObject.Find ("Cubito").transform;
 				cargarPreguntas ();
-				rigidbody2D.velocity = new Vector2 (move, move);
+				rigidbody2D.velocity = new Vector2 (move, 0);
 		}
 
 		void OnCollisionEnter2D (Collision2D  coll)

@@ -75,6 +75,7 @@ public class CubitoScript : MonoBehaviour
 				}
 		}
 
+
 		void Flip ()
 		{
 				facingRight = !facingRight;

@@ -22,6 +22,7 @@ public class PentagonoScript : MonoBehaviour
 				cargarPreguntas ();
 		
 		}
+
 	
 		// Update is called once per frame
 		void FixedUpdate ()
