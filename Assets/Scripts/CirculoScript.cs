@@ -31,16 +31,16 @@ public class CirculoScript : MonoBehaviour
 		{
 
 				//Debug.Log (transform.position.x+ " " +transform.position.y);
-				if (transform.position.x > 10.6f && transform.position.x < 10.8f) {
-						move *= -1;
-						Flip ();
-						Debug.Log ("Cambio hacia derecha");
-			
-				} else if (transform.position.x > 31.5 && transform.position.x < 31.7f) {
-						move *= -1;
-						Flip ();
-						Debug.Log ("Cambio hacia derecha");
-				}
+//				if (transform.position.x > 10.6f && transform.position.x < 10.8f) {
+//						move *= -1;
+//						Flip ();
+//						Debug.Log ("Cambio hacia derecha");
+//			
+//				} else if (transform.position.x > 31.5 && transform.position.x < 31.7f) {
+//						move *= -1;
+//						Flip ();
+//						Debug.Log ("Cambio hacia derecha");
+//				}
 
 				
 		}
@@ -67,7 +67,23 @@ public class CirculoScript : MonoBehaviour
 				}
 		
 		}
-	
+	void OnCollisionStay2D (Collision2D  plano){
+
+		if (plano.gameObject.tag == "Plano") {
+		
+			if (transform.position.x < plano.transform.position.x ) {
+				move *= -1;
+				Flip ();
+				Debug.Log ("Cambio hacia derecha");
+				
+			} else if (transform.position.x > plano.transform.position.x+11) {
+				move *= -1;
+				Flip ();
+				Debug.Log ("Cambio hacia derecha");
+			}
+		}
+		
+	}
 		void Flip ()
 		{
 				facingRight = !facingRight;
