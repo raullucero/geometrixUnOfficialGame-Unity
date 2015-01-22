@@ -74,12 +74,12 @@ public class CirculoScript : MonoBehaviour
 			if (transform.position.x < plano.transform.position.x ) {
 				move *= -1;
 				Flip ();
-				Debug.Log ("Cambio hacia derecha");
+
 				
 			} else if (transform.position.x > plano.transform.position.x+11) {
 				move *= -1;
 				Flip ();
-				Debug.Log ("Cambio hacia derecha");
+
 			}
 		}
 		

@@ -32,6 +32,8 @@ public class CubitoScript : MonoBehaviour
 				if (transform.position.x > 282 && transform.position.x < 285) {
 						win.SetActive (true);
 						Time.timeScale = 0.0f;
+						StartCoroutine (delayMethod ());
+
 				}
 
 
@@ -96,4 +98,11 @@ public class CubitoScript : MonoBehaviour
 						return figura;
 				}
 		}
+
+		private IEnumerator delayMethod ()
+		{
+				yield return new WaitForSeconds (5);
+				Application.LoadLevel ("Menu");
+		}
+
 }

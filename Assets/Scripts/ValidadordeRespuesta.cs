@@ -40,7 +40,10 @@ public class ValidadordeRespuesta : MonoBehaviour
 						Time.timeScale = 1.0f;
 						lose.SetActive (true);
 						menu.SetActive (false);
-						Destroy (GameObject.Find ("Cubito"), 0.5f);
+
+						Destroy (GameObject.Find ("Cubito"), 6f);
+						StartCoroutine (delayMethod ());
+
 				}
 
 		}
@@ -77,7 +80,11 @@ public class ValidadordeRespuesta : MonoBehaviour
 						Time.timeScale = 1.0f;
 						lose.SetActive (true);
 						menu.SetActive (false);
-						Destroy (GameObject.Find ("Cubito"), 0.5f);
+
+						Destroy (GameObject.Find ("Cubito"), 6f);
+						StartCoroutine (delayMethod ());
+
+						
 				}
 	
 		}
@@ -103,11 +110,19 @@ public class ValidadordeRespuesta : MonoBehaviour
 						Time.timeScale = 1.0f;	
 						lose.SetActive (true);
 						menu.SetActive (false);
-						
-						Destroy (GameObject.Find ("Cubito"), 0.5f);
+
+						Destroy (GameObject.Find ("Cubito"), 6f);
+						StartCoroutine (delayMethod ());
+
 				}
 
 						
 
+		}
+
+		private IEnumerator delayMethod ()
+		{
+				yield return new WaitForSeconds (5);
+				Application.LoadLevel ("Menu");
 		}
 }
