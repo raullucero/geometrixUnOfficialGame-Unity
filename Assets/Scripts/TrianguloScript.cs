@@ -7,6 +7,7 @@ public class TrianguloScript : MonoBehaviour
 
 		Transform player;
 		float move;
+		Animator anim;
 		public Text textQuestions;
 		public Text r1;
 		public Text r2;
@@ -16,7 +17,7 @@ public class TrianguloScript : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-
+				anim = GetComponent<Animator> ();
 		}
 	
 		// Update is called once per frame
@@ -36,6 +37,7 @@ public class TrianguloScript : MonoBehaviour
 						r1.text = pregunta [i, 1];
 						r2.text = pregunta [i, 2];
 						r3.text = pregunta [i, 3];
+						anim.SetBool ("Destroy", true);
 			
 				}
 		

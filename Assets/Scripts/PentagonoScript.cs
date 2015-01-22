@@ -49,6 +49,7 @@ public class PentagonoScript : MonoBehaviour
 						r1.text = pregunta [i, 1];
 						r2.text = pregunta [i, 2];
 						r3.text = pregunta [i, 3];
+						anim.SetBool ("Destroy", true);
 				}
 		
 		}

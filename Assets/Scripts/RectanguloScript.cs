@@ -10,10 +10,13 @@ public class RectanguloScript : MonoBehaviour {
 	public Text r2;
 	public Text r3;
 	private string[,] pregunta = new string[3, 4];
+	Animator anim;
+
 
 	// Use this for initialization
 	void Start () {
 		cargarPreguntas ();
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -30,6 +33,7 @@ public class RectanguloScript : MonoBehaviour {
 			r1.text = pregunta [i, 1];
 			r2.text = pregunta [i, 2];
 			r3.text = pregunta [i, 3];
+			anim.SetBool ("Destroy", true);
 			
 		}
 		
