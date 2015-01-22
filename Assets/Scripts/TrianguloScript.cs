@@ -23,7 +23,6 @@ public class TrianguloScript : MonoBehaviour
 		void Update ()
 		{
 				move = -.3f;
-				player = GameObject.Find ("Cubito").transform;
 				cargarPreguntas ();
 				rigidbody2D.velocity = new Vector2 (move, 0);
 		}

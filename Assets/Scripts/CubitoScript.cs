@@ -13,6 +13,7 @@ public class CubitoScript : MonoBehaviour
 		float groundRadius = 0.5f;
 		public LayerMask whatIsGround;
 		public GameObject menu;
+		public GameObject win;
 		private bool isShowing;
 		private string figura;
 		
@@ -28,7 +29,12 @@ public class CubitoScript : MonoBehaviour
 				//Vector3 pointCamera = camera.WorldToViewportPoint (transform.position);
 				//Debug.Log (pointCamera);		
 		
-		
+				if (transform.position.x > 282 && transform.position.x < 285) {
+						win.SetActive (true);
+						Time.timeScale = 0.0f;
+				}
+
+
 				grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 				anim.SetBool ("Ground", grounded);
 
@@ -76,7 +82,6 @@ public class CubitoScript : MonoBehaviour
 						return;
 				}
 		}
-
 
 		void Flip ()
 		{

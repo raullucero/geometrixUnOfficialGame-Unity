@@ -8,6 +8,7 @@ public class ValidadordeRespuesta : MonoBehaviour
 		private GameObject figura;
 		public Text pregunta;
 		public GameObject menu;
+		public GameObject lose;
 
 		void Start ()
 		{
@@ -37,6 +38,7 @@ public class ValidadordeRespuesta : MonoBehaviour
 				} else {
 						Debug.Log ("you die");
 						Time.timeScale = 1.0f;
+						lose.SetActive (true);
 						menu.SetActive (false);
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
@@ -73,6 +75,7 @@ public class ValidadordeRespuesta : MonoBehaviour
 				} else {
 						Debug.Log ("you die");
 						Time.timeScale = 1.0f;
+						lose.SetActive (true);
 						menu.SetActive (false);
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
@@ -98,7 +101,9 @@ public class ValidadordeRespuesta : MonoBehaviour
 				} else {
 						Debug.Log ("you die");
 						Time.timeScale = 1.0f;	
+						lose.SetActive (true);
 						menu.SetActive (false);
+						
 						Destroy (GameObject.Find ("Cubito"), 0.5f);
 				}
 
