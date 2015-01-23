@@ -14,6 +14,7 @@ public class CubitoScript : MonoBehaviour
 		public LayerMask whatIsGround;
 		public GameObject menu;
 		public GameObject win;
+		public GameObject lose;
 		private bool isShowing;
 		private string figura;
 		
@@ -34,6 +35,9 @@ public class CubitoScript : MonoBehaviour
 						Time.timeScale = 0.0f;
 						StartCoroutine (delayMethod ());
 
+				} else if (transform.position.y < -6) {
+						lose.SetActive (true);
+						StartCoroutine (delayMethod ());
 				}
 
 
