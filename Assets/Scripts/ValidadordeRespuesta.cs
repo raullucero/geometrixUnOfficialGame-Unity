@@ -122,7 +122,7 @@ public class ValidadordeRespuesta : MonoBehaviour
 
 		private IEnumerator delayMethod ()
 		{
-				yield return new WaitForSeconds (5);
+				yield return new WaitForSeconds (2);
 				Application.LoadLevel ("Menu");
 		}
 }
